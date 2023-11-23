@@ -1,18 +1,17 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Header with Slideshow</title>
+    <title>Carousel with Text Overlay</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         /* Custom CSS */
-        .header-carousel {
+        .carousel-container {
             position: relative;
             height: 400px; /* Adjust height as needed */
-            color: #000000; /* Text color */
         }
 
         .carousel-item {
@@ -22,90 +21,34 @@
         }
 
         .carousel-caption {
+            position: absolute;
             top: 50%;
-            transform: translateY(-50%);
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #000000; /* Text color */
         }
-
-        body {
-            font-family: 'Microsoft JhengHei', 'Arial', sans-serif;
-        }
-
-        .jumbotron {
-            background-color: #f8f9fa;
-        }
-
-        .vaccine-info {
-            margin-top: 30px;
-        }
-
     </style>
 </head>
 
 <body>
 
-    <!-- Header with Carousel -->
-    <header class="header-carousel">
+    <div class="carousel-container">
         <!-- Carousel -->
-        <div id="headerCarousel" class="carousel slide" data-ride="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active" style="background-image: url('https://news.gsu.edu/files/2022/07/iStock-1288494001.jpg');"></div>
-                <div class="carousel-item" style="background-image: url('https://www.ohsu.edu/sites/default/files/2020-10/iStock-1164812865-web.jpg');"></div>
-                <div class="carousel-item" style="background-image: url('https://elite24er.com/wp-content/uploads/2020/01/When-The-Flu-Shot-Fails-1024x536.jpg');"></div>
+                <div class="carousel-item active" style="background-image: url('https://www.fda.gov/files/iStock-157317886.jpg');"></div>
+                <div class="carousel-item" style="background-image: url('https://www.fda.gov/files/iStock-157317886.jpg');"></div>
+                <div class="carousel-item" style="background-image: url('https://www.fda.gov/files/iStock-157317886.jpg');"></div>
             </div>
         </div>
 
-        <!-- Header content -->
-        <div class="carousel-caption text-center">
-            <h1 class="display-4">立即接種流感疫苗</h1>
-            <p class="lead">保護自己和親人免受流感威脅。</p>
+        <!-- Text or Content Overlaid on Carousel -->
+        <div class="carousel-caption">
+            <h1>This is the header</h1>
+            <p>asdflkasjfd;laksjdf;laksjdf;alskdjf;alskdjf</p>
         </div>
-    </header>
-
-    
-    <!-- About section -->
-    <section class="container">
-        <h2>關於流感疫苗</h2>
-        <p>流感疫苗有助於預防流感病毒。建議所有6個月以上的人接種。</p>
-        <p>接種不僅可以減少患流感的風險，還有助於防止流感在社區中的傳播。</p>
-    </section>
-
-    <!-- Vaccine Information section -->
-    <section class="container vaccine-info">
-        <h2>疫苗資訊</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <h3>接種疫苗的好處</h3>
-                <ul>
-                    <li>減少患流感的風險</li>
-                    <li>如果感染，症狀較輕</li>
-                    <li>保護高危人群</li>
-                    <li>有助於防止流感的傳播</li>
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <h3>常見疫苗類型</h3>
-                <ul>
-                    <li>灭活流感疫苗 (IIV)</li>
-                    <li>重组流感疫苗 (RIV)</li>
-                    <li>活性減毒流感疫苗 (LAIV)</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Appointment and Contact section -->
-    <section class="container">
-        <h2>預約接種</h2>
-        <p>立即為自己和家人預約流感疫苗！</p>
-        <p>聯繫我們預約或獲取更多信息：</p>
-        <p>Email: info@fluvaccines.com</p>
-        <p>電話: 123-456-7890</p>
-    </section>
-
-    <!-- Footer -->
-    <footer class="text-center py-4">
-        <p>&copy; 2023 流感疫苗中心</p>
-    </footer>
+    </div>
 
     <!-- Bootstrap JS and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
